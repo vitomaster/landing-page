@@ -9,6 +9,15 @@
     color: #FFFFFF;
     text-align: center;
 }
+@mixin icon-font{
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: #999999;
+}
 *{
     box-sizing: border-box;
 }
@@ -80,6 +89,273 @@ h2{
     margin: 0;
     margin-top:11px;
 }
-#video-button{
+#vid-but{
+    width: 179px;
+    height: 54px;
+    background: #F44336;
+    box-shadow: 0px 2px 2px rgba(244, 67, 54, 0.14);
+    border-radius: 3px;
+    text-align: center;
+}
+#vid-but a{
+    display: inline-block;
+    margin-top:19px;
+}
+#vid-but svg{
+    vertical-align: top;
+}
+main{
+    position: relative;
+    bottom:60px;
+    width: 95.84%;
+    @include defualt-side-margin;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 24px rgba(0, 0, 0, 0.14), 0px 8px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    @include defualt-font;
+}
+h3{
+    display:inline-block;
+    color: #3C4858;
+    font-size: 36.4px;
+    line-height: 43px;
+    margin-top:97px;
+}
+h4{
+    @include defualt-font;
+    @include defualt-side-margin;
+    font-weight: 300;
+    font-size: 17.5px;
+    line-height: 21px;
+    color: #999999;
+    width:52%;
+}
+.Feature b{
+    @include defualt-font;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    color: #3C4858;
+}
+.Feature{
+    display: inline-grid;
+    @include defualt-font;
+    color: #999999;
+    width: 23.8%;
+    margin-top: 161px;
+}
+.Feature img, b{
+    @include defualt-side-margin;
+    margin-bottom: 31px;
+}
+.Second{
+    margin-left: 62px;
+    margin-right:62px;
+}
+h5{
+    @include defualt-font;
+    color: #3C4858;
+    font-size: 36.4px;
+    line-height: 43px;
+    margin-top: 208px;
+}
+.team{
+    display: inline-grid;
+    @include defualt-font;
+    width: 23.8%;
+}
+.chris{
+    margin-left: 38px;
+    margin-right: 39px;
+}
+.team img{
+    @include defualt-side-margin;
+}
+.team b{
+    font-weight: 500;
+    font-size: 18.2px;
+    line-height: 21px;
+    color: #3C4858;
+    margin-bottom: 0px;
+}
+.team p{
+    font-weight: 500;
+    font-size: 13.65px;
+    line-height: 16px;
+    color: #777777;
+    margin-bottom: 35px;
+}
+.team span,section p{
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+    color: #999999;
+    padding-bottom: 29px;
+}
+.team-icon{
+    display: inline-block;
+    @include icon-font;
+}
+.middle-icon{
+    margin:0 29px 0 29px;
+}
+.side-icon{
+    margin-left: 29px;
+}
+.team svg{
+    vertical-align: middle;
+}
+section{
+    width: 54.5%;
+    @include defualt-side-margin;
+}
+.underline {
+    border: none;
+    border-bottom: 1px solid grey;
+}
+.email{
+    display: block;
+    width: 100%;
+    height: 92px;
+}
+input{
+    outline:none;
+}
+input:hover{
+    border-color: #9C27B0;
+}
 
+.inline{
+    width: 49%;
+}
+#send-message{
+    display: inline-block;
+    width: 148px;
+    height: 41px;
+    background: #9C27B0;
+    box-shadow: 0px 2px 2px rgba(156, 39, 176, 0.2);
+    border-radius: 3px;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 87px;
+}
+#send-message span{
+    display: block;
+    margin-top:13px;
+    @include defualt-font;
+    font-size: 12px;
+    line-height: 14px;
+}
+#send-message:hover{
+    background: #9C27B0;
+    box-shadow: 0px 5px 14px rgba(156, 39, 176, 0.42), 0px 3px 10px rgba(0, 0, 0, 0.12);
+    border-radius: 3px;
+}
+footer{
+    display: flex;
+    width: 79%;
+    justify-content: space-between;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 11px;
+    text-align: center;
+    @include defualt-side-margin;
+}
+#footer-nav{
+    display: flex;
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+}
+#footer-nav a{
+    color: #333333;
+}
+@media screen and (max-width:768px){
+    *{
+          box-sizing: border-box;
+    }
+    body{
+          width: 768px;
+    }
+    #nav-wrapper{
+          display: flex;
+          width: 100%;
+          background: rgba(0, 0, 0, 0.4);
+          height: 70px;
+          margin-top: 0;
+    }
+    #nav-wrapper span{
+          margin-left: 24px;
+    }
+    #nav-links{
+          margin-right: 24px;
+    }
+    header{
+          width: 94%;
+          @include defualt-side-margin;
+    }
+    h4{
+          width:95%;
+    }
+    .Feature, .team{
+          display: grid;
+          width:95%;
+          @include defualt-side-margin;
+    }
+    section{
+          width: 95%;
+    }
+    .inline{
+          display: grid;
+          width: 100%;
+          height: 38px;
+    }
+    footer{
+          display: block;
+          height: 62px;
+          width:95%;
+    }
+    #footer-nav{
+          margin-bottom: 31px;
+    }
+}
+@media screen and(max-width:425px){
+    *{
+          box-sizing: border-box;
+    }
+    body{
+          width: 425px;
+    }
+    #nav-links{
+          display: none;
+    }
+    .menu{
+          float: right;
+          margin-bottom: 15px;
+          margin-right: 25px;
+          width: 22px;
+          height: 14px;
+    }
+      .rectangel{
+          width: 22px;
+          height: 2px;
+          margin-top: 4px;
+          background: #FFFFFF;
+    }
+    #vid-but{
+          margin-top: 42px;
+    }
+    .chris{
+          margin-top: 19px;
+          margin-bottom: 19px;
+    }
+    input{
+          margin-top: 39px;
+    }
+    #footer-nav{
+          justify-content: center;
+    }
 }
